@@ -5,14 +5,33 @@
     <title>Profile</title>
 </head>
 <header>
-    <h1> My Profile</h1>
+    <h1 style="font-family: Garamond"> My Profile</h1>
 </header>
 
-<body>
-    First name: <input type="text" name="First Name" value="None"><br>
-    Last name: <input type="text" name="Last Name" value="None"><br>
-    Subject: <input type="text" name="Subject" value="None">
-    <br>
-    <input type="submit" value="Submit">
+<body style="font-family: Garamond">
+
+<form>
+  <table>
+    <tr>
+      <td align="right">First Name:</td>
+      <td align="left"><input type="text" name="first" /></td>
+    </tr>
+    <tr>
+      <td align="right">Last Name:</td>
+      <td align="left"><input type="text" name="last" /></td>
+    </tr>
+    <tr>
+      <td align="right">Subject:</td>
+      <td align="left"><input type="text" name="email" /></td>
+    </tr>
+  </table>
+</form>
+</div>
+<br>
+<input type="submit" value="Submit" style="font-family: Garamond">
+<br>
+<br>
+<br>
+<a href="{{ url_for('type') }}">Go back</a>
 </body>
 </html>

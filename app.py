@@ -74,15 +74,15 @@ def type():
         return 'you are guest'
     return
 
-@app.route('/student/information')
+@app.route('/information')
 def info():
     return render_template('edit_profile.html')
 
-@app.route('/student/schedule')
+@app.route('/schedule')
 def schedule():
     return render_template('schedule.html')
 
-@app.route('/student/homework')
+@app.route('/homework')
 def homework():
     return render_template('homework.html')
 
