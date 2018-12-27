@@ -86,6 +86,11 @@ def schedule():
 def homework():
     return render_template('homework.html')
 
+@app.route('/progress')
+def progress():
+    return render_template('progress.html')
+
+
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(debug=True)
