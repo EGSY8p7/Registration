@@ -9,16 +9,20 @@
 <body>
 
 <div id="navbar" class="navbar-collapse collapse ">
-
+<header>
+    <h1> Teacher </h1>
+</header>
         <ul class="nav navbar-nav">
-            <li><a href="/">THIS IS TEACHER</a></li>
-            <li><a href="/aboutus">My information</a></li>
+            <li><a href="/student/information">My info</a></li>
             <li><a href="/faqs">Schedule</a></li>
-            <li class="active"><a href="/availability">Homework</a></li>
+            <li><a href="/availability">Homework</a></li>
             <li><a href="/Quiz">Progress</a></li>
         </ul>
 
         <br>
+    <br>
+    <br>
+
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="{{ url_for('sign_out') }}">Logout <span class="sr-only"></span></a></li>

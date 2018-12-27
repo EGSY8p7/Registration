@@ -1,5 +1,8 @@
 from flask import Flask, render_template, url_for, request, session, redirect, flash
 from flask_pymongo import PyMongo
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, SubmitField
+import os
 from flask_login import login_required
 import bcrypt
 
@@ -7,6 +10,9 @@ app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'login'
 app.config['MONGO_URI'] = 'mongodb://admin:qwe123@ds141654.mlab.com:41654/login'
+
+UPLOAD_FOLDER = os.path.basename('uploads')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 mongo = PyMongo(app)
 
@@ -67,6 +73,18 @@ def type():
     elif guest['name'] in session['username']:
         return 'you are guest'
     return
+
+@app.route('/student/information')
+def info():
+    return render_template('edit_profile.html')
+
+@app.route('/student/schedule')
+def schedule():
+    return render_template('schedule.html')
+
+@app.route('/student/homework')
+def homework():
+    return render_template('homework.html')
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
