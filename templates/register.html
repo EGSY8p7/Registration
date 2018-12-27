@@ -1,22 +1,37 @@
 {% extends "layout.html" %}
-{% block body %} 
-<div class="container" style="font-family: Garamond">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <form method=POST action="{{ url_for('register') }}">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Username</label>
-                    <input type="text" class="form-control" name="username" placeholder="Username" required >
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" name="pass" placeholder="Password" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-block">Register</button>
-            </form>
-            <br>
+{% block body %}
+    <div class="container" style="font-family: Garamond">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form method=POST action="{{ url_for('register') }}">
+                    <table>
+                        <tr>
+                            <div class="form-group">
+                                <td align="right">
+                                    <label for="exampleInputEmail1">Username</label>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="username" placeholder="Username"
+                                           required>
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                    <label for="exampleInputPassword1">Password</label>
+                                </td>
+                                <td>
+                                    <input type="password" class="form-control" name="pass" placeholder="Password"
+                                           required>
+                                </td>
+                            </div>
+                        </tr>
+                    </table>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+                <br>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
